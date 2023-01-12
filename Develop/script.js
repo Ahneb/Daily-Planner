@@ -12,9 +12,19 @@ for (let i = 1; i < 25; i++){
     section.classList.add('timeblock');
     container.appendChild(section);
 
+    // create timestamps based on index
+    let timeStamp;
+    if (i<13){
+        // console.log(i%13);
+        timeStamp = (i%13) + ' AM';
+    } else {
+        // console.log((i-12) %13);
+        timeStamp = ((i-12) %13) + ' PM';
+    }
+
     //add time block into each section
     const innerSection1 = document.createElement('div');
-    innerSection1.textContent= i;
+    innerSection1.textContent= timeStamp;
     innerSection1.id = 'block1';    
     innerSection1.classList.add('blocks');
 
@@ -50,7 +60,7 @@ for (let i = 1; i < 25; i++){
 
     //set text for each section
     if (window.localStorage.getItem([i]) === null || window.localStorage.length === 0){
-        innerSection2.textContent = 'Enter your Task';
+        innerSection2.textContent = '';
     } else {
         innerSection2.textContent = window.localStorage.getItem([i]);
     }
@@ -74,3 +84,8 @@ for (let i = 1; i < 25; i++){
         section.classList.add('isRed');
     }
 };
+
+document.querySelector('#reset').addEventListener('click', () => {
+    localStorage.clear();
+    window.location.reload();
+})

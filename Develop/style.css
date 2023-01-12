@@ -91,7 +91,9 @@ textarea{
 }
 
 #block1 {
-  flex: .1;
+  display: flex;
+  flex: .15;
+  justify-content: center;
 }
 
 #currentDay,
