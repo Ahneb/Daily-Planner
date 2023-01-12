@@ -57,7 +57,6 @@ for (let i = 1; i < 25; i++){
 
 
     const current_time = new Date().getHours()+1;
-    // console.log(current_time);
 
     //append all 3 innersections to section
     section.appendChild(innerSection1);
@@ -65,13 +64,13 @@ for (let i = 1; i < 25; i++){
     section.appendChild(innerSection3);
 
     if(i < current_time){
-        console.log('current time is: ' + current_time + ' id is: ' + i + ' grey');
+        // console.log('current time is: ' + current_time + ' id is: ' + i + ' grey');
         section.classList.add('isGrey');
     } else if (i === current_time){
-        console.log('current time is: ' + current_time + ' id is: ' + i + ' green');
+        // console.log('current time is: ' + current_time + ' id is: ' + i + ' green');
         section.classList.add('isGreen');
     } else if (i > current_time){
-        console.log('current time is: ' + current_time + ' id is: ' + i + ' red');
+        // console.log('current time is: ' + current_time + ' id is: ' + i + ' red');
         section.classList.add('isRed');
     }
 };
