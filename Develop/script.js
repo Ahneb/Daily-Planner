@@ -5,6 +5,7 @@ const container = document.querySelector('.container');
 
 document.querySelector('#currentDay').textContent = day + " " + date; //  a simple replace removes the comma;
 
+//for loop creates 24 sections w/ index starting at 1
 for (let i = 1; i < 25; i++){
     //create initial a section container for each hour
     const section = document.createElement('div');
@@ -14,12 +15,16 @@ for (let i = 1; i < 25; i++){
 
     // create timestamps based on index
     let timeStamp;
-    if (i<13){
+    if (i === 1){
+        timeStamp = '12 AM';
+    } else if( i > 1 && i < 13){
         // console.log(i%13);
-        timeStamp = (i%13) + ' AM';
+        timeStamp = ((i-1)%13) + ' AM';
+    } else if (i === 13) {
+        timeStamp = '12 PM';
     } else {
         // console.log((i-12) %13);
-        timeStamp = ((i-12) %13) + ' PM';
+        timeStamp = ((i-13) %13) + ' PM';
     }
 
     //add time block into each section
@@ -54,18 +59,18 @@ for (let i = 1; i < 25; i++){
         let blockContent = innerSection3.parentNode.childNodes[1].innerText;
         localStorage.setItem(parentID, blockContent);
         console.log(section.parentElement.parentElement.childNodes[1].childNodes[7].textContent = 'We have set a new item');
-
     });
-
 
     //set text for each section
     if (window.localStorage.getItem([i]) === null || window.localStorage.length === 0){
+        //set textcontent to be blank if there is no local storage data
         innerSection2.textContent = '';
     } else {
+        //set textcontent to local storage value based on local storage key/index values
         innerSection2.textContent = window.localStorage.getItem([i]);
     }
 
-
+    //set the current time in hours
     const current_time = new Date().getHours()+1;
 
     //append all 3 innersections to section
@@ -73,6 +78,8 @@ for (let i = 1; i < 25; i++){
     section.appendChild(innerSection2);
     section.appendChild(innerSection3);
 
+    //add colors to the section backgrounds based on the time of day
+    //hour of day has passed
     if(i < current_time){
         // console.log('current time is: ' + current_time + ' id is: ' + i + ' grey');
         section.classList.add('isGrey');
