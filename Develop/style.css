@@ -94,6 +94,19 @@ textarea{
   flex: .1;
 }
 
-#currentDay {
+#currentDay,
+#notification {
   color: #a3a3a3;
+}
+
+.isGrey {
+ background-color: grey; 
+}
+
+.isGreen {
+  background-color: green;
+}
+
+.isRed{
+  background-color: red;
 }
