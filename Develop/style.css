@@ -2,6 +2,13 @@ body {
   font-family: 'Open Sans', sans-serif;
   font-size: 16px;
   line-height: 1;
+  background-color: #222222;
+  color: #a3a3a3;
+}
+
+#app_title,
+#app_sub{
+  color: #a3a3a3;
 }
 
 textarea{
@@ -68,4 +75,25 @@ textarea{
 .saveBtn i:hover {
   font-size: 20px;
   transition: all .3s ease-in-out;
+}
+
+.timeblock {
+  /* padding: 20px; */
+  border: solid 2px red;
+  display: flex;
+  flex-direction: row;
+}
+
+.blocks {
+  padding: 20px 40px;
+  border: solid 2px floralwhite;
+  flex: 2 1 auto;
+}
+
+#block1 {
+  flex: .1;
+}
+
+#currentDay {
+  color: #a3a3a3;
 }
