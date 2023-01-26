@@ -14,10 +14,14 @@ Webpage URL:
 ## Demo
 
 Save Button to memorize notes per section:
+![Save Button Gif](https://github.com/Ahneb/Daily-Planner/blob/main/Develop/images/brave_zuSR9qkKM1.gif)
 
 Color Changes to Show change in times:
+![Color Change Picture](https://github.com/Ahneb/Daily-Planner/blob/main/Develop/images/image%20(4).png)
 
 Clear Button:
+![Clear Button Gif](https://github.com/Ahneb/Daily-Planner/blob/main/Develop/images/brave_lpSp98XPK7.gif)
+
 ## License
 
 [MIT](https://choosealicense.com/licenses/mit/)
