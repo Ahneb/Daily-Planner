@@ -6,7 +6,7 @@ This is a schedular Webpage that has the functionality to save information at di
 
 Also information is saved into local storage and there is a clear button to remove all data for when the new day comes or if there is a need to clear the sheduler. There is also a date posted at the top so that its easy to keep track of what day it is.
 
-Webpage URL: 
+Webpage URL: https://ahneb.github.io/Daily-Planner/
 ## Features
 
 - js event listeners to save inputs into local storage
